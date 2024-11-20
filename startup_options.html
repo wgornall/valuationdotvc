@@ -1,61 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="generator"
-    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="./code/bootstrap.min.css" rel="stylesheet" />
-    <script src="./code/jquery-1.12.4.min.js"></script>
-    <script src="./code/bootstrap.min.js"></script>
-    <link href="./code/pagestyle.css" rel="stylesheet" />
-    <script src="./code/jquery-scrolltofixed-min.js" type="text/javascript"></script>
-    <script src="./code/gtagadder.js" type="text/javascript"></script>
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Valuation.VC Startup Stock Option Value Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./favicon.ico">
+</head>
+<style>
+body {
+    max-width: 950px;
+margin-left: auto!important;
+margin-right: auto!important;
+}
+.text-decoration-underline {
+    display: none;
+}
 
-    <![endif]-->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-153166058-1"></script>
-    <link rel="icon" type="image/png" href="./favicon.ico" />
-  <!-- Start of differentiated code -->
-    <title>Startup Option Value Calculator</title>
-  </head>
-  <body onload="onrefreshloop()">
-  <table style=" align:center;width:100%; margin-left: auto; margin-right: auto;max-width: 800px; border: 3px solid white;text-align:center;spacing:0;padding:0;font-weight:bold;font-size:100%;background-color:#22A;color:#ff3300;">
+input {
+    flex: 2;
+    padding: 5px;
+    font-size: 14px;
+    text-align: right;
+}
 
-    <tr>
-      <td height="50px" style="border: 3px solid white;">
-        <a style="color:#fff;" href="index.html">valuation.vc</a>
-      </td> 
-      <td style="border: 3px solid white;">
-        <a href="startup_options.html" style="color:#fff;">Startup Stock Option
-        <br />Value Calculator</a>
-      </td>
-    </tr>
-  </table>
+</style>
+<body onload="onrefreshloop()">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">valuation.vc</a>
+            <div class="navbar-nav">
+                <a class="navbar-brand" href="startup_options.html">Startup Stock Option Value Calculator</a>
+            </div>
+        </div>
+    </nav>
 
-
-
-
-  <script src="./code/react.prod.min.js"></script> 
-  <script src="./code/Chart.min.js"></script> 
-  <script src="./code/optionvaluation.js" type="text/javascript"></script>
-  <div class="container">
-    <h1>Startup Option value calculator</h1>
-    <p>Have you ever wondered about the value of the options and shares that startups issue to employees? If you ask the startup
-    CEO, she tells you they are winning lottery tickets. If you ask your grandmother, she tells you they are worthless. If you use
-    this calculator, you will get a better answer.</p>
-    <p>This calculator was developed by Will Gornall at UBC and Ilya
-    Strebulaev at Stanford University using methodology similar to their paper 
-    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2955455" target="_blank">Squaring Venture Capital Valuations with
-    Reality</a>. This is a beta version, come back soon for updates. By accessing or using the site, you are accepting our <a target="_blank" href="Valuation VC Terms of Use.pdf">terms of use</a>.</p>
-    <div style="float:right">
-      <script src="./code/compact_share_buttons.js" type="text/javascript"></script>
-    </div>
-  </div>
+    <div class="container my-4">
+        <h1 class="mb-3">Startup Stock Option Value Calculator</h1>
+    </div> 
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./favicon.ico">
+       <script src="./code/jquery-1.12.4.min.js"></script>
+       <script src="./code/bootstrap.min.js"></script>
+       <script src="./code/jquery-scrolltofixed-min.js" type="text/javascript"></script>
+       <script src="./code/gtagadder.js" type="text/javascript"></script> 
+        <script src="./code/react.prod.min.js"></script> 
+        <script src="./code/Chart.min.js"></script> 
+        <script src="./code/optionvaluation.js" type="text/javascript"></script>
+      
+ 
   <br />
   <div class="container">
     <h2>Model inputs</h2>
@@ -63,11 +57,11 @@
     <p style="float:left">Your ownership form</p>
     <div style="float:right">
     <label id="in-ShareType1" class="radio-inline">
-    <input type="radio" name="in-ShareType" onchange="onrefreshloop()" checked="checked" />Shares/RSU</label> 
+    <input type="radio" name="in-ShareType" onchange="onrefreshloop()" checked="checked" />Shares/RSU</label>  <br>
     <label id="in-ShareType2" class="radio-inline">
-    <input type="radio" name="in-ShareType" onchange="onrefreshloop()" />Options</label> 
+    <input type="radio" name="in-ShareType" onchange="onrefreshloop()" />Options</label> <br>
     <label id="in-ShareType3" class="radio-inline">
-    <input type="radio" name="in-ShareType" onchange="onrefreshloop()" />Options that must be exercised immediately</label></div>
+    <input type="radio" name="in-ShareType" onchange="onrefreshloop()" />Options that must be exercised immediately</label> <br> &nbsp;</div>
     <p style="float:left;text-align:left;clear:both;">Number of shares or options you own</p>
     <div width="300px" style="float:right; text-align:left;">
       <input id="in-NumberOptionsOwned" placeholder="Required" onchange="onrefreshloop()" />
@@ -109,68 +103,7 @@
       <p style="float:left;text-align:left;clear:both;">Share price paid by investors in last financing round</p>
       <div style="float:right;">
       <input id="in-SharePrice" value="" placeholder="Required" min="0" onchange="onrefreshloop()" /> dollars</div>
-      <p style="float:left;text-align:left;clear:both;border-bottom: 2px dotted #999;"
-      title="Enter 100 for a doubling in value and -50 for a halving in value. If you loaded our data, the date of the latest financing round is mentioned above.">
-      Company growth since last financing round</p>
-      <div style="float:right;">
-      <input id="in-GrowthSinceLastRound" value="" placeholder="0" min="-99"
-      data-error="Please enter a number greater than -100 rounded to the nearest thousandth." onchange="onrefreshloop()" /> %</div>
-      <p style="float:left;text-align:left;clear:both;">Amount invested in last financing round</p>
-      <div width="300px" style="float:right;">
-      <input id="in-InvestmentAmount" value="" placeholder="Unsure" min="0" onchange="onrefreshloop()" /> million dollars</div>
-      <p style="float:left;text-align:left;clear:both;">Liquidation multiple of last financing round</p>
-      <div width="300px" style="float:right;">
-      <input id="in-LiquidationMultiple" value="" min="0" placeholder="Unsure" onchange="onrefreshloop()" /> x</div>
-      <p style="float:left;text-align:left;clear:both;">Participation for last financing round</p>
-      <div width="300px" style="float:right;">
-      <label class="radio-inline">
-      <input type="radio" name="in-Participation" onchange="onrefreshloop()" checked="checked" />Unsure</label> 
-      <label class="radio-inline">
-      <input type="radio" name="in-Participation" onchange="onrefreshloop()" />No</label> 
-      <label class="radio-inline">
-      <input type="radio" name="in-Participation" onchange="onrefreshloop()" />Participation</label> 
-      <label class="radio-inline">
-      <input type="radio" name="in-Participation" onchange="onrefreshloop()" />Capped Particip.</label></div>
-      <div id="ParticipationCap">
-        <p style="float:left;text-align:left;clear:both;border-bottom: 2px dotted #999;"
-        title="Enter 4 if the most recent investor can get up to 4 times their initial investment without converting.">Cap on
-        participation</p>
-        <div width="300px" style="float:right;">
-        <input id="in-ParticipationCap" placeholder="Unsure" onchange="onrefreshloop()" /> x</div>
-      </div>
-      <p style="float:left;text-align:left;clear:both;border-bottom: 2px dotted #999;"
-      title="Enter 0 if there are no cumulative dividends. Enter 4 for a 4% rate.">Cumulative dividend rate</p>
-      <div width="300px" style="float:right;">
-      <input id="in-CumDiv" placeholder="Unsure" onchange="onrefreshloop()" /> %</div>
-      <p style="float:left;text-align:left;clear:both;border-bottom: 2px dotted #999;"
-      title="A &quot;down IPO&quot; refers to an IPO at a share price below the price the investor purchased shares at.">The most
-      recent investor can block a down-IPO</p>
-      <div style="float:right;">
-      <label class="radio-inline">
-      <input type="radio" name="in-BlockIPO" checked="checked" onchange="onrefreshloop()" />Unsure</label> 
-      <label class="radio-inline">
-      <input type="radio" name="in-BlockIPO" onchange="onrefreshloop()" />No</label> 
-      <label class="radio-inline">
-      <input type="radio" name="in-BlockIPO" onchange="onrefreshloop()" />Yes</label></div>
-      <p style="float:left;text-align:left;clear:both;">The most recent investor gets extra shares in a down-IPO</p>
-      <div style="float:right;">
-      <label class="radio-inline">
-      <input type="radio" name="in-IPORatchet" checked="checked" onchange="onrefreshloop()" />Unsure</label> 
-      <label class="radio-inline">
-      <input type="radio" name="in-IPORatchet" onchange="onrefreshloop()" />No</label> 
-      <label class="radio-inline">
-      <input type="radio" name="in-IPORatchet" onchange="onrefreshloop()" />Yes</label></div>
-      <div id="IPORatchetLevel">
-        <p style="float:left;text-align:left;clear:both;">The return the most recent investor is entitled to in a down-IPO 
-        <small>Enter 1 if the most recent investor has a 1X IPO ratchet and so gets extra shares in down-IPOs to prevent them
-        losing money</small></p>
-        <div style="float:right;">
-        <input id="in-IPORatchetLevel" value="" min="0" placeholder="Unsure" onchange="onrefreshloop()" /> X</div>
-      </div>
-      <p style="float:left;text-align:left;clear:both;">Total investment in rounds prior to the last financing round</p>
-      <div style="float:right;">
-      <input id="in-OldInv" value="" placeholder="Unsure" min="0" onchange="onrefreshloop()" /> million dollars</div>
-      <p style="float:left;text-align:left;clear:both;">Custom parameter assumptions</p>
+      <p style="float:left;text-align:left;clear:both;">Additional model inputs</p>
       <div style="float:right;">
       <label class="radio-inline">
       <input type="radio" name="in-CustomParameters" checked="checked" onchange="onrefreshloop()" />No</label> 
@@ -178,6 +111,67 @@
       <input type="radio" name="in-CustomParameters" onchange="onrefreshloop()" />Yes</label></div>
     </div>
     <div id="CustomParameters1" style="display:none;">
+    <p style="float:left;text-align:left;clear:both;border-bottom: 2px dotted #999;"
+    title="Enter 100 for a doubling in value and -50 for a halving in value. ">
+    Company growth since last financing round</p>
+    <div style="float:right;">
+    <input id="in-GrowthSinceLastRound" value="" placeholder="0" min="-99"
+    data-error="Please enter a number greater than -100 rounded to the nearest thousandth." onchange="onrefreshloop()" /> %</div>
+    <p style="float:left;text-align:left;clear:both;">Amount invested in last financing round</p>
+    <div width="300px" style="float:right;">
+    <input id="in-InvestmentAmount" value="" placeholder="Unsure" min="0" onchange="onrefreshloop()" /> million dollars</div>
+    <p style="float:left;text-align:left;clear:both;">Liquidation multiple of last financing round</p>
+    <div width="300px" style="float:right;">
+    <input id="in-LiquidationMultiple" value="" min="0" placeholder="Unsure" onchange="onrefreshloop()" /> x</div>
+    <p style="float:left;text-align:left;clear:both;">Participation for last financing round</p>
+    <div width="300px" style="float:right;">
+    <label class="radio-inline">
+    <input type="radio" name="in-Participation" onchange="onrefreshloop()" checked="checked" />Unsure</label> 
+    <label class="radio-inline">
+    <input type="radio" name="in-Participation" onchange="onrefreshloop()" />No</label> 
+    <label class="radio-inline">
+    <input type="radio" name="in-Participation" onchange="onrefreshloop()" />Participation</label> 
+    <label class="radio-inline">
+    <input type="radio" name="in-Participation" onchange="onrefreshloop()" />Capped Particip.</label></div>
+    <div id="ParticipationCap">
+      <p style="float:left;text-align:left;clear:both;border-bottom: 2px dotted #999;"
+      title="Enter 4 if the most recent investor can get up to 4 times their initial investment without converting.">Cap on
+      participation</p>
+      <div width="300px" style="float:right;">
+      <input id="in-ParticipationCap" placeholder="Unsure" onchange="onrefreshloop()" /> x</div>
+    </div>
+    <p style="float:left;text-align:left;clear:both;border-bottom: 2px dotted #999;"
+    title="Enter 0 if there are no cumulative dividends. Enter 4 for a 4% rate.">Cumulative dividend rate</p>
+    <div width="300px" style="float:right;">
+    <input id="in-CumDiv" placeholder="Unsure" onchange="onrefreshloop()" /> %</div>
+    <p style="float:left;text-align:left;clear:both;border-bottom: 2px dotted #999;"
+    title="A &quot;down IPO&quot; refers to an IPO at a share price below the price the investor purchased shares at.">The most
+    recent investor can block a down-IPO</p>
+    <div style="float:right;">
+    <label class="radio-inline">
+    <input type="radio" name="in-BlockIPO" checked="checked" onchange="onrefreshloop()" />Unsure</label> 
+    <label class="radio-inline">
+    <input type="radio" name="in-BlockIPO" onchange="onrefreshloop()" />No</label> 
+    <label class="radio-inline">
+    <input type="radio" name="in-BlockIPO" onchange="onrefreshloop()" />Yes</label></div>
+    <p style="float:left;text-align:left;clear:both;">The most recent investor gets extra shares in a down-IPO</p>
+    <div style="float:right;">
+    <label class="radio-inline">
+    <input type="radio" name="in-IPORatchet" checked="checked" onchange="onrefreshloop()" />Unsure</label> 
+    <label class="radio-inline">
+    <input type="radio" name="in-IPORatchet" onchange="onrefreshloop()" />No</label> 
+    <label class="radio-inline">
+    <input type="radio" name="in-IPORatchet" onchange="onrefreshloop()" />Yes</label></div>
+    <div id="IPORatchetLevel">
+      <p style="float:left;text-align:left;clear:both;">The return the most recent investor is entitled to in a down-IPO 
+      <small>Enter 1 if the most recent investor has a 1X IPO ratchet and so gets extra shares in down-IPOs to prevent them
+      losing money</small></p>
+      <div style="float:right;">
+      <input id="in-IPORatchetLevel" value="" min="0" placeholder="Unsure" onchange="onrefreshloop()" /> X</div>
+    </div>
+    <p style="float:left;text-align:left;clear:both;">Total investment in rounds prior to the last financing round</p>
+    <div style="float:right;">
+    <input id="in-OldInv" value="" placeholder="Unsure" min="0" onchange="onrefreshloop()" /> million dollars</div>
       <p style="float:left;text-align:left;clear:both;">Average time until exit</p>
       <div style="float:right;">
       <input id="in-ExitTime" value="4" min="0" placeholder="Unsure" onchange="onrefreshloop()" /> years</div>
@@ -202,28 +196,31 @@
       <input id="in-MarketRiskPremium" value="5" min="0" placeholder="Unsure" onchange="onrefreshloop()" /> %</div>
       <div style="display:none">
       <input id="in-Special" onchange="onrefreshloop()" /> %</div>
-      <br style="clear:both;" />
     </div>
   </div>
-  <br />
+  <br style="clear:both;" />
   <div class="container">
     <h2>Model outputs</h2> 
     <div class="footer-marker"></div>
     <div class="footer">
       <div class="stickyinner">
-        <div id="Incomplete-footer">
+        <div id="Incomplete-footer" class="bg-warning">
+          <br>
           <center>
             <big>Answer the questions in red to see an estimate of your share value</big>
           </center>
+          <br>
         </div>
-        <div id="PC-footer" style="display:none">
+        <div id="PC-footer" style="display:none" class="bg-info">
+          <br>
           <center>
           <big>Your shares are worth approximately</big>
           <p style="display:inline" id="op-ValuationBG">
             <big>ERROR!</big>
           </p>
           <big>based on your answers</big>
-          <br />Answer more questions to improve this estimate or scroll down for more information</center>
+          <br />Answer more questions using "Additional model inputs" improve this estimate or scroll down for more information</center>
+          <br>
         </div>
         <div id="Phone-footer" style="display:none">
           <center>
@@ -253,39 +250,38 @@
         </div>
       </div>
     </div>
-    <div id="Output-data" style="display:none">
-    <br />We are gathering data on more companies and more recent financing rounds. Complete the survey 
-    <a href="https://stanfordgsb.qualtrics.com/jfe/form/SV_25eI6mJXjod2BpP" target="_blank">here</a> and we will contact you when
-    we gather data on your company.
+    <div id="Output-data" style="display:none"> 
     <br />
     <br />The numbers here are estimates of the fair value of your shares or options. When we say fair value, we mean the value
     that something would have if they were sold in an orderly transaction. We determine fair value by looking at the prices paid
     for other securities issued by the same company.
+    <br>
+    <br style="clear:both" /> 
     <br style="clear:both" />
+    <div class="d-block p-2"> 
     <h3>Estimated fair value of company</h3>
-    <div width="300px" style="float:left;word-wrap: break-word; width:300px;">Post-money valuation at previous round:
-    <br />
+    <div style="float:left;word-wrap: break-word;max-width:600px;">Post-money valuation at previous round:
     <p style="display:inline" id="op-PostmoneyValuation">ERROR!</p>million
     <br />
     <br />Fair value of company at previous round:
-    <br />
     <p style="display:inline" id="op-ValueOfCompanyAtRound">ERROR!</p>million
     <br />
-    <br />Fair value of company after
-    <p style="display:inline" id="op-GrowthSinceLastRound">ERROR!</p>growth:
-    <br />
+    <br />Fair value of company after &nbsp;
+    <p style="display:inline" id="op-GrowthSinceLastRound">ERROR!</p>  &nbsp; growth:
     <p style="display:inline" id="op-ValueOfCompanyNow">ERROR!</p>million</div>
-    <div class="chart-container" style=" height:200px; width:300px; float:left;">
+    <div class="chart-container" style=" height:200px; max-width:400px; float:right;">
       <canvas id="chart-CompanyValue"></canvas>
     </div>
+
     <br style="clear:both" />
+    </div>
+    <br style="clear:both" />
+    <div class="d-block p-2"> 
     <h3>Estimated fair value of each type of share</h3>
-    <div width="200px" style="word-wrap: break-word; width:300px; float:left;">The most recent preferred shares:
-    <br />
+    <div  style="word-wrap: break-word; max-width:400px; float:left;">The most recent preferred shares:
     <p style="display:inline" id="op-ValueOfPreferred">ERROR!</p>
     <br />
     <br />A common share:
-    <br />
     <p style="display:inline" id="op-ValueOfCommon">ERROR!</p>
     <br />
     <br />
@@ -298,28 +294,44 @@
     <br />
     <br />
     <p style="display:inline" id="op-ShowOptionStrikePriceGuessed">The option exercise price was set so that the option would be at
-    the money at the time of the previous financing round.</p></div>
-    <div class="chart-container" width="300px" style="height:200px; width:300px; float:left;">
+    the money at the time of the previous financing round.</p>
+    </div>
+    <div class="chart-container"  style="height:200px; max-width:400px; float:right;">
       <canvas id="chart-RelativeValues"></canvas>
     </div>
+    
     <br style="clear:both" />
+    </div>
+    <br style="clear:both" />
+    <div class="d-block p-2"> 
+    
     <h3>What different shares are worth in different liquidity events</h3>
-    <div class="chart-container" style="height:300px; float:left; width:300px">
+    <div class="chart-container" style="height:300px; float:left; max-width:400px">
       <b>M&amp;A waterfall</b>
       <br />
       <canvas id="chart-MAWaterfall"></canvas>
     </div>
-    <div class="chart-container" style="height:300px; float:left; width:300px">
+    <div class="chart-container" style="height:300px; float:right; max-width:400px">
       <b>IPO waterfall</b>
       <br />
       <canvas id="chart-IPOWaterfall"></canvas>
     </div>
+    <br>
+    <br>
+
     <br style="clear:both" />
-    <h3>Estimated distribution of payoffs at liquidity event</h3>
-    <div class="chart-container" style="position: relative; height:300px; width:100%">
-      <canvas id="chart-PayoffDistribution"></canvas>
     </div>
     <br style="clear:both" />
+    <div class="d-block p-2"> 
+    <h3>Estimated distribution of payoffs at liquidity event</h3>
+    <div class="chart-container" style="position: relative; height:300px; max-width:600px">
+      <canvas id="chart-PayoffDistribution"></canvas>
+    </div>
+    <br> 
+    <br style="clear:both" />
+    
+    
+    
     <p id="op-explanationfordicePMT">ERROR!</p>
     <table>
       <tr>
@@ -419,15 +431,6 @@
     <p>
       <i>If your company is atypical, the values produced may be incorrect.</i>
     </p>
-    <h3>Is the preloaded financial data correct?</h3>
-    <!--QUESTION -->
-    <p>To help startup employees who do not have access to financial data, the calculator allows the easy loading of startup
-    financial data gathered from legal filings. Checking these data for accuracy for all startups is extremely labor intensive. In
-    addition, some companies enter into very complicated contracts with its investors that require more intricate modeling. Because
-    of this some startup financial information may be incorrect.</p>
-    <p>
-      <i>The financial data we have preloaded is a work in progress and may contain errors.</i>
-    </p>
   </div>
   <br />
   <div class="container">
@@ -483,92 +486,40 @@
   </div>
   <br />
   <br />
-  <div class="container">
-    <!-- Other papers -->
-    <h2>Our venture capital papers</h2>
-<style>
-/* Override margin styles */
-.m-2, .m-lg-3 {
-    padding-top: 20px !important; 
-}
+  <div class="container"> 
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 
-/* Override text styles */
-.h6 {
 
-    font-size: 1.5rem !important; /* Adjust font size as needed */
-    font-weight: normal !important; /* Optional: Adjust font weight */
-}
-
-/* Override text-nowrap-sm and margin classes */
-.text-nowrap-sm {  
-
-}
-
-.ms-sm-2, .ms-md-2, .ms-lg-3 {
-
-}
-
-/* Override d-sm-block */
-.d-sm-block {
-
-display: block;
-}
-
-/* Style the "Cite in Bibtex" link */
-.d-md-inline {
-
-}.d-none {
- 
-}
-
-.small {
-    font-size: inherit !important; /* Adjust size if needed */
-}
-
-.text-decoration-underline {
-    display: none;
-}
-
-/* Style the image */
-img[src="files/cite.png"] {
-    height: 10px !important;
-    width: 13px !important;
-}
-
-</style>
+    <div class="container my-4">
+        <h2 class="mb-3">Venture Capital Writing</h2>
+  <div class="m-2 m-lg-3">
+    <a class="h6"
+        href="https://thevcmindset.com/">
+      The Venture Mindset </a>
+    <span class="text-nowrap-sm ms-sm-2 ms-md-2 ms-lg-3">Strebulaev, Ilya A and Dang, Alex 
+    </span>  
+    <span class="d-sm-block m-0 ms-sm-2 ms-md-2 ms-lg-3">
+   <b> National Bestseller, Financial Times Business Book Of The Month </b></span>
+      <span class="d-none d-md-block small text-muted ms-sm-2 ms-md-2 ms-lg-3">
+   
+     The Venture Mindset is a new mental model where failure is a must, ideas are rejected in their myriads in search of a single winner, due diligence is put on its head, dissent is encouraged, plugs are pulled, and time horizons are extended. It is fundamentally different from the mindset found throughout the rest of the business world. This mindset helps leaders to develop a strong pipeline of ideas, make smarter, quicker decisions, and deliver more value at scale. 
+    </span>
+  </div>
+  
   <div class="m-2 m-lg-3">
     <a class="h6"
         href="https://ssrn.com/abstract=4235337">
       The Value of Privacy and the Choice of Limited Partners by Venture Capitalists</a>
-    <span class="text-nowrap-sm ms-sm-2 ms-md-2 ms-lg-3">
-      with
-      <a href="https://www.rustamabuzov.com/">
-        Rustam Abuzov</a>
-      and
-      <a href="https://ilyas1.people.stanford.edu/">
-        Ilya A. Strebulaev</a>
+    <span class="text-nowrap-sm ms-sm-2 ms-md-2 ms-lg-3">Abuzov, Rustam and Gornall, Will and Strebulaev, Ilya A
     </span>
     <span class="d-sm-block m-0 ms-sm-2 ms-md-2 ms-lg-3">
       Forthcoming in <b>Journal of Financial Economics</b> 
       <a class="d-none small d-md-inline ms-sm-2 ms-md-2 ms-lg-3 text-decoration-underline" data-bs-toggle="popover" data-bs-content="citeValueOfPrivacy">
-        <img height="10px" width="13px" src="files/cite.png">
-        Cite in Bibtex
+        
       </a>
     </span>   
-
-<template id="citeValueOfPrivacy">
-@article{abuzov2022value,
-<br>
-  title={The value of privacy and the choice of limited partners by venture capitalists},
-<br>
-  author={Abuzov, Rustam and Gornall, Will and Strebulaev, Ilya A},
-<br>
-  journal={Journal of Financial Economics},
-<br>
-  year={Forthcoming}
-}
-</template>
-
+ 
     <span class="d-none d-md-block small text-muted ms-sm-2 ms-md-2 ms-lg-3">
       We show the venture capitalist response to open information laws prevented public LPs from investing in the best-performing funds
     </span>
@@ -581,36 +532,15 @@ img[src="files/cite.png"] {
         href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4720785">
         Customer Data Access and Fintech Entry: Early Evidence from Open Banking</a>
     <span class="text-nowrap-sm ms-sm-2 ms-md-2 ms-lg-3">
-      with
-      <a href="https://www.taniababina.com/">Tania Babina</a>,
-      <a href="https://sites.google.com/site/saleembahaj/home">Saleem A. Bahaj</a>,
-      <a href="https://sites.google.com/view/greg-buchak/">Greg Buchak</a>,
-      <a href="https://sites.google.com/view/flippodemarco">Filippo De Marco</a>,
-      <a href="https://www.bankofengland.co.uk/research/researchers/angus-foulis">Angus K. Foulis</a>,
-      <a href="https://www.francescomazzola.org/">Francesco Mazzola</a>, and
-      <a href="https://profiles.imperial.ac.uk/t.yu18">Tong Yu.</a> 
+    Babina, Tania and Bahaj, Saleem A. and Buchak, Greg and De Marco, Filippo and Foulis, Angus K. and Gornall, Will and Mazzola, Francesco and Yu, Tong
     </span>
     <span class="d-sm-block m-0 ms-sm-2 ms-md-2 ms-lg-3">
       Forthcoming in <b>Journal of Financial Economics</b> 
       <a class="d-none small d-md-inline ms-sm-2 ms-md-2 ms-lg-3 text-decoration-underline" data-bs-toggle="popover" data-bs-content="citeCustomerDataAccess">
-        <img height="10px" width="13px" src="files/cite.png">
-        Cite in Bibtex
+
       </a>
     </span>   
-
-<template id="citeCustomerDataAccess">
-@article{babina2024ob,
-<br>
-  title={Customer Data Access and Fintech Entry: {Early} Evidence from Open Banking},
-<br>
-  author={Babina, Tania and Bahaj, Saleem A. and Buchak, Greg and De Marco, Filippo and Foulis, Angus K. and Gornall, Will and Mazzola, Francesco and Yu, Tong},
-<br>
-  journal={Journal of Financial Economics},
-<br>
-  year={Forthcoming}
-<br>
-}
-</template>
+ 
 
     <span class="d-none d-md-block small text-muted ms-sm-2 ms-md-2 ms-lg-3">
       We provide a global overview of the causes and effects of open banking, policies that empower customers to share their banking data with fintechs
@@ -627,31 +557,16 @@ img[src="files/cite.png"] {
         href="https://ssrn.com/abstract=3301982">
       Gender, Race, and Entrepreneurship: A Randomized Field Experiment on Venture Capitalists and Angels</a>
     <span class="text-nowrap-sm m-0 ms-sm-2 ms-md-2 ms-lg-3">
-      with <a href="https://ilyas1.people.stanford.edu/">
-        Ilya A. Strebulaev,</a>
+     Gornall, Will and Strebulaev, Ilya A</a>
     </span>
 
     <span class="d-sm-block m-0 ms-sm-2 ms-md-2 ms-lg-3">
       Forthcoming in <b>Management Science</b> 
       <a class="d-none small d-md-inline ms-sm-2 ms-md-2 ms-lg-3 text-decoration-underline" data-bs-toggle="popover" data-bs-content="citeGenderRaceVC">
-        <img height="10px" width="13px" src="files/cite.png">
-        Cite in Bibtex
+
+        
       </a>
     </span>   
-
-<template id="citeGenderRaceVC">
-@article{gornall2023gender,
-<br>
-  title={Gender, race, and entrepreneurship: A randomized field experiment on venture capitalists and angels},
-<br>
-  author={Gornall, Will and Strebulaev, Ilya A},
-<br>
-  journal={Management Science},
-<br>
-  year={Forthcoming}
-<br>
-}
-</template> 
  
     <span class="d-none d-md-block small text-muted ms-sm-2 ms-md-2 ms-lg-3">
       We study gender and race in high-impact entrepreneurship using a field experiment
@@ -665,45 +580,16 @@ img[src="files/cite.png"] {
     <a class="h6"
         href="https://ssrn.com/abstract=3669345">
       Venture Capitalists and COVID-19</a>
-    <span class="text-nowrap-sm m-0 ms-sm-2 ms-md-2 ms-lg-3">
-      with
-      <a href="https://www.hbs.edu/faculty/Pages/profile.aspx?facId=6463">
-        Paul A. Gompers,</a>
-      <a href="https://faculty.chicagobooth.edu/steven-kaplan">
-        Steven N. Kaplan,</a>
-      and
-      <a href="https://ilyas1.people.stanford.edu/">
-        Ilya A. Strebulaev,</a>
+    <span class="text-nowrap-sm m-0 ms-sm-2 ms-md-2 ms-lg-3">Gompers, Paul and Gornall, Will and Kaplan, Steven N and Strebulaev, Ilya A
     </span>
     <span class="d-sm-block m-0 ms-sm-2 ms-md-2 ms-lg-3">
       <b>Journal of Financial and Quantitative Analysis</b> 2021, 56(7), 2474-2499
       <a class="d-none small d-md-inline ms-sm-2 ms-md-2 ms-lg-3 text-decoration-underline" data-bs-toggle="popover" data-bs-content="citeVCCovid">
-        <img height="10px" width="13px" src="files/cite.png">
-        Cite in Bibtex
+
+        
       </a>
     </span>   
-
-<template id="citeVCCovid">
-@article{gompers2021venture,
-<br>
-  title={Venture capitalists and COVID-19},
-<br>
-  author={Gompers, Paul and Gornall, Will and Kaplan, Steven N and Strebulaev, Ilya A},
-<br>
-  journal={Journal of Financial and Quantitative Analysis},
-<br>
-  volume={56},
-<br>
-  number={7},
-<br>
-  pages={2474--2499},
-<br>
-  year={2021},
-<br>
-  publisher={Cambridge University Press}
-<br>
-}
-</template>  
+ 
 
     <span class="d-none d-md-block small text-muted ms-sm-2 ms-md-2 ms-lg-3">
       We survey 1,000 venture capitalists on how they were affected by COVID-19
@@ -717,40 +603,16 @@ img[src="files/cite.png"] {
     <a class="h6"
         href="https://ssrn.com/abstract=2955455">
       Squaring Venture Capital Valuations with Reality</a>
-    <span class="text-nowrap-sm ms-sm-2 ms-md-2 ms-lg-3">
-      with
-      <a href="https://ilyas1.people.stanford.edu/">
-        Ilya A. Strebulaev,</a>
+    <span class="text-nowrap-sm ms-sm-2 ms-md-2 ms-lg-3">Gornall, Will and Strebulaev, Ilya A
     </span>
     <span class="d-sm-block m-0 ms-sm-2 ms-md-2 ms-lg-3">
       <b>Journal of Financial Economics</b> 2020, 135(1), 120–143; <a href="https://www.pesummitseries.com/wp-content/uploads/2021/04/210406-Doriot-Award_guidelines-PES-2021.pdf">Doriot Award</a>
       <a class="d-none small d-md-inline ms-sm-2 ms-md-2 ms-lg-3 text-decoration-underline" data-bs-toggle="popover" data-bs-content="gornall2020squaring">
-        <img height="10px" width="13px" src="files/cite.png">
-        Cite in Bibtex
+
+        
       </a>
     </span>   
-
-<template id="gornall2020squaring">
-@article{gornall2020squaring,
-<br>
-  title={Squaring venture capital valuations with reality},
-<br>
-  author={Gornall, Will and Strebulaev, Ilya A},
-<br>
-  journal={Journal of Financial Economics},
-<br>
-  volume={135},
-<br>
-  number={1},
-<br>
-  pages={120--143},
-<br>
-  year={2020},
-<br>
-  publisher={Elsevier}
-<br>
-}
-</template>  
+ 
     <span class="d-none d-md-block small text-muted ms-sm-2 ms-md-2 ms-lg-3">
       We model venture capital-backed company exits and show post--money valuations exceed fair values by 48%
     </span>    
@@ -773,47 +635,17 @@ img[src="files/cite.png"] {
     <a class="h6"
         href="https://ssrn.com/abstract=2801385">
       How Do Venture Capitalists Make Decisions?</a>
-    <span class="text-nowrap-sm ms-sm-2 ms-md-2 ms-lg-3">
-      with
-      <a href="https://www.hbs.edu/faculty/Pages/profile.aspx?facId=6463">
-        Paul A. Gompers,</a>
-      <a href="https://faculty.chicagobooth.edu/steven-kaplan">
-        Steven N. Kaplan,</a>
-      and
-      <a href="https://ilyas1.people.stanford.edu/">
-        Ilya A. Strebulaev,</a>
+    <span class="text-nowrap-sm ms-sm-2 ms-md-2 ms-lg-3">Gompers, Paul A and Gornall, Will and Kaplan, Steven N and Strebulaev, Ilya A
     </span>
     <span class="d-sm-block m-0 ms-sm-2 ms-md-2 ms-lg-3">
       <b>Journal of Financial Economics</b> 2020, 135(1), 169–190; <a href="https://www.jfinec.com/jensen-prize">Jensen Prize</a>
 
       <a class="d-none small d-md-inline ms-sm-2 ms-md-2 ms-lg-3 text-decoration-underline" data-bs-toggle="popover" data-bs-content="gompers2020venture">
-        <img height="10px" width="13px" src="files/cite.png">
-        Cite in Bibtex
+
+        
       </a>
     </span>   
-
-<template id="gompers2020venture">
-@article{gompers2020venture,
-<br>
-  title={How do venture capitalists make decisions?},
-<br>
-  author={Gompers, Paul A and Gornall, Will and Kaplan, Steven N and Strebulaev, Ilya A},
-<br>
-  journal={Journal of Financial Economics},
-<br>
-  volume={135},
-<br>
-  number={1},
-<br>
-  pages={169--190},
-<br>
-  year={2020},
-<br>
-  publisher={Elsevier}
-<br>
-}
-</template>  
-
+ 
     <span class="d-none d-md-block small text-muted ms-sm-2 ms-md-2 ms-lg-3">
       We survey 885 venture capitalists to learn how they make decisions
     </span>
@@ -833,30 +665,12 @@ img[src="files/cite.png"] {
     <a class="h6"
         href="https://ssrn.com/abstract=3725240">
       A Valuation Model of Venture Capital-Backed Companies with Multiple Financing Rounds</a>
-    <span class="text-nowrap-sm ms-sm-2 ms-md-2 ms-lg-3">
-      with
-      <a href="https://ilyas1.people.stanford.edu/">
-        Ilya A. Strebulaev</a>
+    <span class="text-nowrap-sm ms-sm-2 ms-md-2 ms-lg-3">Gornall, Will and Strebulaev, Ilya A
       <a class="d-none small d-md-inline ms-sm-2 ms-md-2 ms-lg-3 text-decoration-underline" data-bs-toggle="popover" data-bs-content="gornall2021valuation">
-        <img height="10px" width="13px" src="files/cite.png">
-        Cite in Bibtex
+
+        
       </a>
-    </span>   
-
-<template id="gornall2021valuation">
-@article{gornall2021valuation,
-<br>
-  title={A valuation model of venture capital-backed companies with multiple financing rounds},
-<br>
-  author={Gornall, Will and Strebulaev, Ilya A},
-<br>
-  journal={Available at SSRN 3725240},
-<br>
-  year={2021}
-<br>
-}
-</template>  
-
+    </span>    
     <span class="d-none d-md-block small text-muted ms-sm-2 ms-md-2 ms-lg-3">
       An option pricing model of venture capital-backed companies and their security values that incorporates the dilutive future financing rounds
     </span>
@@ -866,29 +680,13 @@ img[src="files/cite.png"] {
     <a class="h6"
         href="https://ssrn.com/abstract=2681841">
       The Economic Impact of Venture Capital</a>
-    <span class="text-nowrap-sm ms-sm-2 ms-md-2 ms-lg-3">
-      with
-      <a href="https://ilyas1.people.stanford.edu/">
-        Ilya A. Strebulaev</a>
+    <span class="text-nowrap-sm ms-sm-2 ms-md-2 ms-lg-3">Gornall, Will and Strebulaev, Ilya A
       <a class="d-none small d-md-inline ms-sm-2 ms-md-2 ms-lg-3 text-decoration-underline" data-bs-toggle="popover" data-bs-content="gornall2021economic">
-        <img height="10px" width="13px" src="files/cite.png">
-        Cite in Bibtex
+
+        
       </a>
     </span>   
-
-<template id="gornall2021economic">
-@article{gornall2021economic,
-<br>
-  title={The economic impact of venture capital: Evidence from public companies},
-<br>
-  author={Gornall, Will and Strebulaev, Ilya A},
-<br>
-  journal={Available at SSRN 2681841},
-<br>
-  year={2021}
-<br>
-}
-</template>   
+ 
 
     <span class="d-none d-md-block small text-muted ms-sm-2 ms-md-2 ms-lg-3">
       We use data from public companies to quantify the role of venture capital in the economy
@@ -906,48 +704,15 @@ img[src="files/cite.png"] {
     <a class="h6"
         href="https://ssrn.com/abstract=2681841">
       The Contracting and Valuation of Venture Capital-Backed Companies</a>
-    <span class="text-nowrap-sm ms-sm-2 ms-md-2 ms-lg-3">
-      with
-      <a href="https://ilyas1.people.stanford.edu/">Ilya A. Strebulaev,</a>
+    <span class="text-nowrap-sm ms-sm-2 ms-md-2 ms-lg-3">Gornall, Will and Strebulaev, Ilya A
       <a class="d-none small d-md-inline ms-sm-2 ms-md-2 ms-lg-3 text-decoration-underline" data-bs-toggle="popover" data-bs-content="gornall2023vcvaluationcontracts">
-        <img height="10px" width="13px" src="files/cite.png">
-        Cite in Bibtex
+
+        
       </a>
     </span>
     <span class="d-sm-block m-0 ms-sm-2 ms-md-2 ms-lg-3">
         In: Eckbo, B.E., Phillips,  G.M. , Sorensen, M. (eds) <b>Handbook of the Economics of Corporate Finance</b>. Amsterdam: North-Holland, an imprint of Elsevier, 2023. 1, 3-76
-    </span>   
-
-<template id="gornall2023vcvaluationcontracts">
-@incollection{gornall2023vcvaluationcontracts,
-<br>
-title = {Chapter 1 - The contracting and valuation of venture capital-backed companies},
-<br>
-editor = {B. Espen Eckbo and Gordon M. Phillips and Morten Sorensen},
-<br>
-series = {Handbook of the Economics of Corporate Finance},
-<br>
-publisher = {North-Holland},
-<br>
-volume = {1},
-<br>
-number = {1},
-<br>
-pages = {3-76},
-<br>
-year = {2023},
-<br>
-booktitle = {Private Equity and Entrepreneurial Finance},
-<br>
-issn = {2949-964X},
-<br>
-doi = {https://doi.org/10.1016/bs.hecf.2023.02.001},
-<br>
-url = {https://www.sciencedirect.com/science/article/pii/S2949964X23000012},
-<br>
-author = {Will Gornall and Ilya A. Strebulaev},
-}
-</template> 
+    </span>    
 
 
 
@@ -961,49 +726,17 @@ author = {Will Gornall and Ilya A. Strebulaev},
     <a class="h6"
         href="https://link.springer.com/referencework/10.1007/978-3-030-38738-9">
       Venture Capital Valuation</a>
-    <span class="text-nowrap-sm ms-sm-2 ms-md-2 ms-lg-3">
-      with
-      <a href="https://ilyas1.people.stanford.edu/">
-        Ilya A. Strebulaev,</a>
+    <span class="text-nowrap-sm ms-sm-2 ms-md-2 ms-lg-3">Gornall, Will and Strebulaev, Ilya A
 
       <a class="d-none small d-md-inline ms-sm-2 ms-md-2 ms-lg-3 text-decoration-underline" data-bs-toggle="popover" data-bs-content="gornall2020palgrave">
-        <img height="10px" width="13px" src="files/cite.png">
-        Cite in Bibtex
+
+        
       </a>
     </span>
     <span class="d-sm-block m-0 ms-sm-2 ms-md-2 ms-lg-3">
       In: Cumming, D., Hammer, B. (eds) <b>The Palgrave Encyclopedia of Private Equity</b>. Cham: Springer International Publishing, 2023. 1-5.
     </span> 
- 
-
-<template id="gornall2020palgrave">
-@Inbook{gornall2020palgrave,
-<br>
-author="Gornall, Will and Strebulaev, Ilya A.",
-<br>
-editor="Cumming, Douglas and Hammer, Benjamin",
-<br>
-title="Venture Capital Valuation",
-<br>
-bookTitle="The Palgrave Encyclopedia of Private Equity",
-<br>
-year="2020",
-<br>
-publisher="Springer International Publishing",
-<br>
-address="Cham",
-<br>
-pages="1--5",
-<br>
-isbn="978-3-030-38738-9",
-<br>
-doi="10.1007/978-3-030-38738-9_10-1",
-<br>
-url="https://doi.org/10.1007/978-3-030-38738-9_10-1"
-<br>
-}
-</template> 
-
+  
  
 
     <span class="d-none d-md-block small text-muted ms-sm-2 ms-md-2 ms-lg-3">
@@ -1015,9 +748,9 @@ url="https://doi.org/10.1007/978-3-030-38738-9_10-1"
     <a class="h6"
         href="https://hbr.org/2021/03/how-venture-capitalists-make-decisions">
       How Venture Capitalists Make Decisions</a>
-    <span class="text-nowrap-sm ms-sm-2 ms-md-2 ms-lg-3">
-      with <a href="https://www.hbs.edu/faculty/Pages/profile.aspx?facId=6463">Paul A. Gompers</a>, <a href="https://faculty.chicagobooth.edu/steven-kaplan">Steven N. Kaplan</a>, and <a href="https://ilyas1.people.stanford.edu/">Ilya A. Strebulaev,</a>
+    <span class="text-nowrap-sm m-0 ms-sm-2 ms-md-2 ms-lg-3">Gompers, Paul and Gornall, Will and Kaplan, Steven N and Strebulaev, Ilya A
     </span>
+
     <span class="d-sm-block m-0 ms-sm-2 ms-md-2 ms-lg-3">
       <b>Harvard Business Review</b> 99.2 (2021): 70-+
     </span>
@@ -1032,18 +765,17 @@ url="https://doi.org/10.1007/978-3-030-38738-9_10-1"
 
  
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-
-  <center>  <script src="./code/compact_share_buttons.js" type="text/javascript"></script>
-  <br />Version 0.24.1120. By accessing or using the site, you are accepting our 
-  <a target="_blank" href="Valuation%20VC%20Terms%20of%20Use.pdf">terms of use</a>.
-  <br />
-  <br /></center>
-
-  
-    <script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script> 
+<script>
         window.onload = function () {
             loadCoData(false);
         };
     </script>
+    <footer class="container text-center my-4">
+        <p>Version 0.24.1120. By accessing or using the site, you are accepting our 
+        <a href="Valuation%20VC%20Terms%20of%20Use.pdf" target="_blank">terms of use</a>.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

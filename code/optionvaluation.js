@@ -1048,15 +1048,14 @@ function updatevisibleinputs() {
         document.getElementById("IPORatchetLevel").style.display = 'none';
     }
             
-    
-    
+     
     
 }
 
 function onrefreshloop() { 
  
     if( document.getElementById("in-NumberOptionsOwned").value*1 > 0 ){
-        document.getElementById("in-NumberOptionsOwned").style.cssText  = "border: none !important";     
+        document.getElementById("in-NumberOptionsOwned").style.cssText  = "border: solid black !important";     
     } else {
         document.getElementById("in-NumberOptionsOwned").style.cssText  = "border: solid red !important";         
     }
@@ -1076,14 +1075,14 @@ function onrefreshloop() {
         document.getElementById("in-OptionStrikePrice").placeholder  = "Required";         
     }
     else {
-        document.getElementById("in-OptionStrikePrice").style.cssText = "border: none !important";    
+        document.getElementById("in-OptionStrikePrice").style.cssText = "border: solid black !important";    
         document.getElementById("in-OptionStrikePrice").placeholder  = "Unsure";         
     }    
     
     
  
     if( document.getElementById("in-NumberOptionsOwned").value*1 > 0 ){
-        document.getElementById("in-NumberOptionsOwned").style.cssText  = "border: none !important";     
+        document.getElementById("in-NumberOptionsOwned").style.cssText  = "border: solid black !important";     
     } else {
         document.getElementById("in-NumberOptionsOwned").style.cssText  = "border: solid red !important";         
     }
@@ -1091,19 +1090,19 @@ function onrefreshloop() {
      
     
     if( document.getElementById("in-PMV").value*1 > 0 ){
-        document.getElementById("in-PMV").style.cssText  = "border: none !important";     
+        document.getElementById("in-PMV").style.cssText  = "border: solid black !important";     
     } else {
         document.getElementById("in-PMV").style.cssText  = "border: solid red !important";         
     }
     
     if( document.getElementById("in-SharePrice").value*1 > 0 ){
-        document.getElementById("in-SharePrice").style.cssText  = "border: none !important";     
+        document.getElementById("in-SharePrice").style.cssText  = "border: solid black !important";     
     } else {
         document.getElementById("in-SharePrice").style.cssText  = "border: solid red !important";         
     }
     
     if( companyLoaded > -1 ){
-        document.getElementById("myInput").style.cssText  = "border: none  !important";    
+        document.getElementById("myInput").style.cssText  = "border: solid black  !important";    
     } else {
         document.getElementById("myInput").style.cssText  = "border: solid red !important";         
     }
