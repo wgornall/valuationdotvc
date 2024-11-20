@@ -1033,34 +1033,6 @@ url="https://doi.org/10.1007/978-3-030-38738-9_10-1"
  
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-<script>
-// Initialize popovers
-
-const popoverButtons = document.querySelectorAll('[data-bs-toggle="popover"]');
-
-  // Initialize Popover
-  const links = document.querySelectorAll('[data-bs-toggle="popover"]');
-  links.forEach(link => {
-    const contentTemplate = document.querySelector(`#${link.getAttribute('data-bs-content')}`);
-    new bootstrap.Popover(link, {
-      trigger: 'click',
-      placement: 'bottom',
-      html: true,
-      content: contentTemplate?.innerHTML || 'Content not found'
-    });
-  });
-// Hide popovers on outside click
-document.addEventListener('click', e => {
-  if (!e.target.closest('[data-bs-toggle="popover"], .popover')) {
-    popoverButtons.forEach(button => {
-      bootstrap.Popover.getInstance(button)?.hide();
-      button.classList.remove('active-popover');
-    });
-  }
-});
-
-</script>
-
 
   <center>  <script src="./code/compact_share_buttons.js" type="text/javascript"></script>
   <br />Version 0.24.1120. By accessing or using the site, you are accepting our 
